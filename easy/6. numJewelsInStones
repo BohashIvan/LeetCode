@@ -1,0 +1,21 @@
+// 1.
+var numJewelsInStones = function (jewels, stones) {
+	var jewelsArr = jewels.split('');
+	var counter = 0;
+	for (var i = 0; i < stones.length; i += 1) {
+		if (jewelsArr.includes(stones[i])) {
+			counter += 1;
+		}
+	}
+	return counter;
+};
+
+// 2.
+var numJewelsInStones = function (jewels, stones) {
+  return stones.split('').filter(function (elem) {
+	  return jewels.includes(elem);
+  }).length;
+}
+
+// Input: jewels = "aA", stones = "aAAbbbb"
+// Output: 3
