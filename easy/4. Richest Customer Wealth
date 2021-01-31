@@ -1,0 +1,14 @@
+var maximumWealth = function (accounts) {
+	var maxNum = 0;
+	for (var i = 0; i < accounts.length; i += 1) {
+		var sum = accounts[i].reduce(function (a, b) {
+			return a + b;
+		});
+		if (sum > maxNum) {
+			maxNum = sum;
+		}
+	}
+	return maxNum;
+};
+
+// var accounts = [[1, 2, 3], [3, 2, 1]];
